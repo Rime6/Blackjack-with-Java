@@ -10,13 +10,11 @@ public class Player {
  
      /*Constructor*/
  Player(){
-       //VOTRE CODE VIENT ICI
        hand = new ArrayList<Card>();
     }  
  
  /*Accessor*/
  public ArrayList<Card> getHand() {
-        //VOTRE CODE VIENT ICI
         return hand;
     }
  
@@ -24,7 +22,6 @@ public class Player {
      * Remove all cards from the hand, leaving it empty.
   */
     public void clear() {
-       //VOTRE CODE VIENT ICI
        hand.clear();
     }
 
@@ -34,7 +31,6 @@ public class Player {
      * @throws NullPointerException if the parameter card is null.
      */
     public void add(Card card) {
-        //VOTRE CODE VIENT ICI
         if (card==null){
             throw new NullPointerException("No card specified");
         }
@@ -47,7 +43,6 @@ public class Player {
      * the hand, then nothing is done.
      */
     public void remove(Card card) {
-        //VOTRE CODE VIENT ICI
         if (card != null && hand.contains(card)){
             hand.remove(card);
         }
@@ -62,7 +57,6 @@ public class Player {
      * or equal to the number of cards in the hand.
      */
     public void remove(int position) {
-        //VOTRE CODE VIENT ICI
         if (position<0 || position >= hand.size()){
             throw new IllegalArgumentException("That position does not exist in hand");
         }
@@ -73,7 +67,6 @@ public class Player {
      * Returns the number of cards in the hand.
      */
     public int totalCards() {
-        //VOTRE CODE VIENT ICI
         return hand.size();
     }
 
@@ -84,7 +77,6 @@ public class Player {
      * @throws IllegalArgumentException if position does not exist in the hand
      */
     public Card getCard(int position) {
-        //VOTRE CODE VIENT ICI
         if (position<0 || position >= hand.size()){
             throw new IllegalArgumentException("That position does not exist in hand");
         }
@@ -95,8 +87,6 @@ public class Player {
      * Computes and returns the total value of this hand in the game
      */
     public int getHandTotal () {
-
-        //VOTRE CODE VIENT ICI
         int total = 0;
         int aceCount = 0; 
 
@@ -124,7 +114,6 @@ public class Player {
      * Note that aces are considered to have the lowest value, 1.
      */
     public void sortByColor() {
-        //VOTRE CODE VIENT ICI
         for (int i = 0; i < hand.size() - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < hand.size(); j++) {
@@ -145,7 +134,6 @@ public class Player {
      * Note that aces are considered to have the lowest value, 1.
      */
     public void sortByValue() {
-        //VOTRE CODE VIENT ICI
         for (int i = 0; i < hand.size() - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < hand.size(); j++) {
